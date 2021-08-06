@@ -1,0 +1,148 @@
+/* google-font */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxygen', sans-serif;
+}
+/* header strt */
+:root {
+    --primary-color: #FFFFFF;
+    --btn-color:#E02C6D;
+}
+.top-baner{
+    height: 500px;
+    width: auto;
+    background-color:#2D25A0;
+}
+.baner{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 35px;
+    width: 100%;
+}
+.heading1{
+    padding-top: 80px;
+}
+h1{
+    color: var(--primary-color);
+    font-size: 3.2rem;
+    font-weight: 800;
+}
+button a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+button{
+    background-color: var(--btn-color);
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin:25px 100px 0px 0px;
+    transition: 4s;
+}
+button:hover{
+    text-decoration: underline;
+}
+.baner-img{
+    height: 438px;
+    width: 556px;
+    /* transition: 2s;
+    overflow: hidden; */
+    
+}
+/* .baner-img:hover{
+    transform: scale(1.5);   
+} */
+/* header end */
+
+/* main start */
+.players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 70px 160px;
+}
+.card{
+    /* height: 450px;
+    width: 330px; */
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.player-name{
+    padding: 15px 0px;
+}
+.match-highlight{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    width: 100%;
+    padding: 70px 160px;
+}
+.highlight{
+    padding: 40px 10px 0px 0px;
+}
+.heading2{
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+.match-schedule{
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* .schedule{} */
+
+/* main end */
+
+/* footer start*/
+.footer-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.icon{
+    margin-left: 10px;
+}
+.social, .footer{
+    margin-top: 15px;
+}
+/* footer end */
+@media only screen and (max-width:689px) {
+    .top-baner{
+        height: auto;
+        width: 547px;
+        background-color: #2D25A0;
+        margin: 20px;
+
+    }
+    .baner{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+    }
+    .players{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+    }
+    .card{
+        width:570px;
+        height:695px;
+    }
+    .footer-box{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+}
