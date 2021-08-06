@@ -49,13 +49,12 @@ button:hover{
 .baner-img{
     height: 438px;
     width: 556px;
-    /* transition: 2s;
-    overflow: hidden; */
+    transition: 2s;
     
 }
-/* .baner-img:hover{
-    transform: scale(1.5);   
-} */
+.baner-img:hover{
+    transform: translateX(-30%) rotateY(-180deg);  
+}
 /* header end */
 
 /* main start */
@@ -65,8 +64,6 @@ button:hover{
     padding: 70px 160px;
 }
 .card{
-    /* height: 450px;
-    width: 330px; */
     margin: 10px;
     padding: 20px;
     background-color: var(--primary-color);
@@ -74,6 +71,8 @@ button:hover{
 }
 .player-name{
     padding: 15px 0px;
+    font-size: 20px;
+    font-weight: 900;
 }
 .match-highlight{
     display: grid;
@@ -93,9 +92,84 @@ button:hover{
 }
 .match-schedule{
     text-align: center;
-    margin-bottom: 20px;
 }
-/* .schedule{} */
+.schedule{
+    display: grid;
+    justify-content: center;
+    padding: 35px 0px;
+    grid-template-areas: 
+    'a b c'
+    ;
+}
+.group1{
+    grid-area: a;
+    display: grid;
+    grid-template-areas: 
+    'g1'
+    'g2'
+    'g2'
+    ;
+}
+.copa.png{
+    grid-area: a;
+    margin: 0px;
+    padding: 7px;
+}
+.group2{
+    grid-area: c;
+    display: grid;
+    grid-template-areas: 
+    'g4'
+    'g5'
+    'g6'
+    ;
+}
+.all-team{
+    margin-top: 10px;
+}
+.team1{
+    
+    grid-area: g1;
+    background-color:aqua;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: var(--primary-color);
+}
+.team2{
+    grid-area: g2;
+    background-color: aqua;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: var(--primary-color);
+}
+.team3{
+    grid-area: g3;
+    background-color: aqua;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: var(--primary-color);
+}
+.team4{
+    grid-area: g4;
+    background-color: aqua;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: var(--primary-color);
+}
+.team5{
+    grid-area: g5;
+    background-color: aqua;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: var(--primary-color);
+}
+.team6{
+    grid-area: g6;
+    background-color: aqua;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: var(--primary-color);
+}
 
 /* main end */
 
@@ -114,6 +188,8 @@ button:hover{
     margin-top: 15px;
 }
 /* footer end */
+
+ /* media screen start---mobile view */
 @media only screen and (max-width:689px) {
     .top-baner{
         height: auto;
@@ -126,7 +202,10 @@ button:hover{
         display: flex;
         flex-direction: column;
         margin: 0px;
-        padding: 0px;
+        padding: 20px;
+    }
+    button{
+        margin: 35px 0px;
     }
     .players{
         display: flex;
@@ -138,6 +217,22 @@ button:hover{
         width:570px;
         height:695px;
     }
+    .match-highlight {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        margin-left: 35px;
+        padding: 0px 0px;
+    }
+    .schedule{
+        display: grid;
+        grid-template-areas: 
+        'a'
+        'b'
+        'c'
+        ;
+    }
     .footer-box{
         display: flex;
         flex-direction: column;
@@ -145,4 +240,30 @@ button:hover{
         padding: 0px;
     }
     
+}
+  /* media screen start---tablet view */
+@media only screen and (min-width:689px) and (max-width:991px){
+    .baner {
+        display: flex;
+        padding: 35px 20px;
+        width: 100%;
+    }
+    .players{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0px;
+        padding: 0px;
+    }
+    .match-highlight{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        width: 100%;
+        margin: 20px 10px;
+        padding: 0px;
+    }
+    .highlight {
+        padding: 0px 0px 0px 0px;
+    }
+
 }
